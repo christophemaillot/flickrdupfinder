@@ -1,0 +1,24 @@
+<?php
+
+    require "flickr.inc.php";
+    require "apikey.inc.php";
+    
+    $flickr = new Flickr($flickr_apikey, $flickr_secret);
+
+    session_start();
+
+    $token  = $_SESSION['flickr_token'];
+
+    if ($token != "") {
+        $ret = $flickr->send("flickr.auth.checkToken", array("auth_token" => $token));
+        if ($ret["stat"] != "ok") {
+            echo json_encode(array("status"=>"unauth,wrongtoken"));
+        } else {
+            echo json_encode(array("status"=>"auth", "username"=>$ret["auth"]["user"]["username"], "nsid"=>$ret["auth"]["user"]["nsid"]));
+        }
+    } else {
+            echo json_encode(array("status"=>"unauth,notoken"));
+    }
+    
+
+?>

@@ -1,0 +1,22 @@
+<?php
+
+    require "flickr.inc.php";
+    require "apikey.inc.php";
+    
+    $flickr = new Flickr($flickr_apikey, $flickr_secret);
+    
+    session_start();
+    
+    $params = array();
+    
+    $params["photo_id"] = $_GET["id"];
+    $params["auth_token"] = $_SESSION['flickr_token'] ;
+    
+    $obj = $flickr->send("flickr.photos.getAllContexts", $params);
+    
+    $obj["id"] =  $_GET["id"];
+    
+    echo json_encode($obj);
+
+
+?>

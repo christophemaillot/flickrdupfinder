@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+    <head>
+        <title>FlickDupFinder - find duplicate photos on Flickr</title>
+        <link rel="stylesheet" type="text/css" href="screen.css" />
+        <meta name="title" value="FlickrDupFinder - find duplicate photos on Flickr" />
+        <meta name="description" value="FlickrDupFinder - an online simple tool to find duplicate photos on Flickr and tag them" />
+    </head>
+    
+    <body>
+        <div id="container">
+            <div id="header">
+                <div id="hdrl1">
+
+                </div>
+                <div id="hdrl2">
+                    <span id="title1">Flickr Dup Finder</span>
+                    <span id="title2">find duplicates on your Flickr account</span>
+                </div>
+                <div id="hdrl3">
+                    <div id="steps">
+                        <span class="step" id="step_login">Login</span>
+                        <span class="stepsep">&gt;</span>
+                        <span class="step" id="step_find">Find duplicates</span>
+                        <span class="stepsep">&gt;</span>
+                        <span class="step" id="step_remove">Remove them</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="main">
+                <div class="page" id="page_login">
+                    <h1> What is FlickDupFinder ? </h1>
+                    <p> Ever got your photos uploaded twice on Flickr ? Wondering if you got photos more than once
+                    on your Flickr account ?</p>
+                    
+                    <p> <b>FlickrDupFinder</b> let you easily find duplicate photos on your Flickr account.</p>
+            
+                    <p> Login,  click on "Find duplicate". <b>FlickrDupFinder</b> will fetch your photos, analyze them,
+                        and show you a list of duplicate candidates. </p>
+               
+                        
+                    <p> <b>FlickDupFinder</b> is an online tool, so nothing to download or install. Just use <b>FlickrDupFinder</b> 
+                        right away.</p>
+                     
+                    <p> To procede, please login with Flickr : </p>
+                    
+                    <div class="attn">
+                        <span id="loginbtn" class="button">Login with Flickr</span>
+                    </div>
+
+                </div>
+                
+                <div class="page" id="page_find">
+                    <h1> logged in </h1>
+                    <p> You're logged in as <span id="name">anonymous</span>. You can now click on "find duplicates" to start
+                        finding duplicates photos.</p>
+                    <div class="attn">
+                        <span id="findbtn" class="button">Find duplicates</span>
+                    </div>
+                </div>
+                
+                <div class="page" id="page_remove">
+                     <p id="dupcount"> Not duplicates found ! </p>
+                     <div id="dup">
+                     
+                     </div>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div id="dlg_bg"></div>
+        <div id="dlg_login" class="dlg">
+            <div>Logging in ...</div>
+            <div><img src="images/load.gif" alt="loading ..." /></div>
+        </div>
+        <div id="dlg_processing" class="dlg">
+            <div>processing ... page <span id="page">1</span> / <span id="pages">1</span> </div>
+            <div><img src="images/load.gif" alt="loading ..." /></div>
+        </div>
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="flickrdupfinder.js"></script>
+    </body>
+</html>

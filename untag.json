@@ -1,0 +1,29 @@
+<?php
+
+    require "flickr.inc.php";
+    require "apikey.inc.php";
+    
+    $flickr = new Flickr($flickr_apikey, $flickr_secret);
+    
+    session_start();
+    
+    $params = array();
+    $params["photo_id"] = $_GET["id"];
+    $params["auth_token"] = $_SESSION['flickr_token'] ;
+    
+    $obj = $flickr->send("flickr.photos.getInfo", $params);
+    
+    foreach($obj["photo"]["tags"]["tag"] as $tag) {
+        if ($tag["raw"] == "duplicate") {
+            $id =  $tag["id"];
+    
+            $params = array();
+            $params["tag_id"] = $id;
+            $params["auth_token"] = $_SESSION['flickr_token'] ;
+            $flickr->send("flickr.photos.removeTag", $params);
+        }
+    }
+    
+    echo "{status:\"ok\"}";
+
+?>

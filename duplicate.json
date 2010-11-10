@@ -1,0 +1,37 @@
+<?php
+
+    require "flickr.inc.php";
+    require "apikey.inc.php";
+    
+    $flickr = new Flickr($flickr_apikey, $flickr_secret);
+    
+    session_start();
+    
+    $resp = array();
+    $page = 1;
+    $pages = 1;
+    
+    do {
+        $params = array();
+
+        $params["page"] = $page;
+        $params["per_page"] = 500;
+        $params["user_id"] = "me";
+        $params["tags"] = "duplicate";
+        $params["auth_token"] = $_SESSION['flickr_token'] ;
+        
+        $obj = $flickr->send("flickr.photos.search", $params);
+      
+        $page = $obj["photos"]["page"];
+        $pages = $obj["photos"]["pages"]; 
+    
+        foreach ($obj["photos"]["photo"] as $elt) {
+             $resp[] = $elt["id"];
+        }
+        
+    } while($page != $pages);
+    
+    echo json_encode($resp);
+
+
+?>

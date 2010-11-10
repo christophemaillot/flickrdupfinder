@@ -1,0 +1,244 @@
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #E3DDCB;
+    color: #00000;
+}
+
+#container {
+    width: 1024px;
+    border: 1px solid black;
+    border: 8px solid #d4cfbb;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F7F5EF;
+    margin-top: 8px;
+    min-height: 512px;
+}
+
+#header {
+    height: 166px;
+    background-image:url('images/header_bg.png');   
+}
+
+#hdrl1 {
+    height: 30px;
+    position: relative;
+}
+
+#hdrl2 {
+    height: 98px;
+    position: relative;
+}
+
+#hdrl3 {
+    height: 34px;
+    position: relative;
+}
+
+#title1 {
+    display:block;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    color: #304040;
+    text-shadow: #909090 1px 1px 1px;
+    width: 230px;
+    text-align: justify;
+}
+
+#title2 {
+    display:block;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    position: absolute;
+    top: 38px;
+    left: 30px;
+    color: #506060;
+    width: 230px;
+    text-align: justify;
+}
+
+#steps {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    height: 22px;
+}
+
+.stepsep {
+    color: #808080;   
+}
+
+.step {
+    padding-left: 8px;
+    padding-right: 8px;   
+}
+
+#stepfind, #stepremove {
+    color: #909090;   
+}
+
+
+.page {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #404040;
+    padding-right: 8px;
+    padding-left: 8px;
+    display: none;
+}
+
+.page h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #F0F0F0;
+    background-color: #808080;
+    padding: 2px;
+    padding-left: 8px;
+    border-radius: 6px;
+    -moz-border-radius : 6px;
+    margin-top: 16px;
+}
+
+
+.button {
+     cursor: pointer;
+     padding: 6px;
+     border-top: 1px solid #E0E0E0;
+     border-left: 1px solid #E0E0E0;
+
+     border-bottom: 1px solid #404040;
+     border-right: 1px solid #404040;
+     
+     background-color: #D0D0D0;
+
+     text-shadow: #909090 1px 1px 1px;
+}
+
+.attn {
+    padding: 16px;
+    text-align: center;
+}
+
+.dlg {
+    background-color: white;
+    border: 8px solid #d4cfbb;
+    display: none;
+    position: absolute;
+}
+
+
+#dlg_bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;   
+    background-color: black;  
+}
+
+#dlg_login {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-align: center;   
+    padding-top: 16px;
+}
+
+#dlg_login div {
+    padding: 16px;   
+}
+
+#dlg_processing {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-align: center;   
+    padding-top: 16px;
+}
+
+#dlg_processing div {
+    padding: 16px;   
+
+}
+
+
+.dupbox {
+    position: relative;
+    height: 84px;
+}
+
+.dup_img {
+    position: absolute;
+    top: 2px;
+    left: 30px;   
+}
+
+.dup_title {
+    position: absolute;
+    top: 2px;
+    left: 150px;   
+}
+
+.dup_id {
+    position: absolute;
+    top: 17px;
+    left: 150px;
+    
+}
+
+.dup_sets {
+    position: absolute;
+    top: 32px;
+    left: 150px;   
+    
+}
+
+.dup_tags {
+    position: absolute;
+    top: 47px;
+    left: 150px;   
+    
+}
+
+.dup_status {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    width: 136px;
+    height: 48px;
+    display: none;
+}
+
+.switch_out {
+    width: 88px;
+    height: 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.switch_in {
+    background-image:url('images/switch.png');
+    width: 136px;
+    height: 24px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}    
+
+.wrapper:hover {
+    background-color: #D8D8D0;
+    padding: 8px;
+}
+
+
+.wrapper {
+    padding: 8px;
+}
