@@ -287,6 +287,8 @@ FDF.on_json_info = function(data) {
             html_sets = html_sets + "<a href=\"http://www.flickr.com/photos/me/sets/" + sets[i].id + "/\">" + sets[i].title + "</a> ";   
         }
         $("#p_" + id).find(".dup_sets").html(html_sets);
+    } else {
+        $("#p_" + id).find(".dup_sets").html("sets : none");
     }
     if (FDF.element_num < FDF.elements.length)
         FDF.element_info(FDF.element_num + 1);
