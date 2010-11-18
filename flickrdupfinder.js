@@ -237,7 +237,7 @@ FDF.analyze = function() {
             var fsrc = "http://www.flickr.com/photo.gne?id=" + elt.id;
             var image = $("<img src=\"" + src + "\" alt=\"\" class=\"dup_img\"/>");
             var title = $("<span class=\"dup_title\"> <b>title :</b> " + elt.title + "</span>");   
-            var ident = $("<span class=\"dup_id\"> <b>identifier :</b> <a href=\"http://flickr.com/photo.gne?id=" + elt.id + "\">"+ elt.id + "</a></span>");   
+            var ident = $("<span class=\"dup_id\"> <b>identifier :</b> <a href=\"http://flickr.com/photo.gne?id=" + elt.id + "\" target=\"_blank\">"+ elt.id + "</a></span>");   
             var sets = $("<span class=\"dup_sets\"> <b>sets : </b> <img src=\"images/load_2.gif\" alt=\"\" /></span>");   
             var status = $("<div class=\"dup_status\" id=\"status_" + elt.id + "\"><div>Duplicate tag :</div><div class=\"switch_out\"><div class=\"switch_in\"></div></div>");   
             
@@ -290,7 +290,7 @@ FDF.on_json_info = function(data) {
     } else {
         $("#p_" + id).find(".dup_sets").html("sets : none");
     }
-    if (FDF.element_num < FDF.elements.length)
+    if (FDF.element_num + 1 < FDF.elements.length)
         FDF.element_info(FDF.element_num + 1);
 }
 
